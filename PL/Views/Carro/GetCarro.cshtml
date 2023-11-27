@@ -1,0 +1,44 @@
+﻿@model ML.Carro
+@{
+    ViewBag.Title = "GetCarro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetCarro</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">IdCarro</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Numero de serie</th>
+            <th scope="col">Color</th>
+            <th scope="col">Pais de Origen</th>
+            <th scope="col">Placa</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(ML.Carro carro in Model.Carros) { 
+        <tr>
+            <th scope="row"><button type="button" class="btn btn-outline-warning">Actualizar</button></th>
+            <th scope="row">@carro.IdCarro</th>
+            <td>@carro.Marca</td>
+            <td>@carro.Modelo</td>
+            <td>@carro.NumeroSerie</td>
+            <td>@carro.Color</td>
+            <td>@carro.PaisOrigen</td>
+            <td>@carro.Marca</td>
+            <td>
+                <a  class="btn btn-outline-danger" @Html.Action("Eliminar", "Carro")>Eliminar</a>
+            </td>
+        </tr>
+        }
+        
+    </tbody>
+
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model ML.Carro
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Carro</h2>
+
+@Html.HiddenFor(Model.IdCarro)
+<div class="container text-center">
+    <div class="row row-cols-2">
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.Marca,  new{@class = "form-control"})
+                @Html.TextBoxFor(Model.Marca, new {@class = "form-control"})
+            
+            </div>
+
+        </div>
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.Modelo, new { @class = "form-control" })
+                @Html.TextBoxFor(Model.Modelo, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.NumeroSerie, new { @class = "form-control" })
+                @Html.TextBoxFor(Model.NumeroSerie, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.Color, new { @class = "form-control" })
+                @Html.TextBoxFor(Model.Color, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.PaisOrigen, new { @class = "form-control" })
+                @Html.TextBoxFor(Model.PaisOrigen, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                @Html.LabelFor(Model.Placa, new { @class = "form-control" })
+                @Html.TextBoxFor(Model.Placa, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col">Column</div>
+    </div>
+</div>
+
