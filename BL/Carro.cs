@@ -19,7 +19,7 @@ namespace BL
             {
                 using(DL.IMartinezPruebaTecnica4Entities contex = new DL.IMartinezPruebaTecnica4Entities())
                 {
-                    var query = contex.GetAll();
+                    var query = contex.GetAll().ToList();
                     if (query != null)
                     {
                         result.Objects = new List<object>();
@@ -57,9 +57,21 @@ namespace BL
             {
                 using(DL.IMartinezPruebaTecnica4Entities context = new DL.IMartinezPruebaTecnica4Entities())
                 {
-                    var query = context.GetById(idCarro);
+                    var query = context.GetById(idCarro).FirstOrDefault();
+                    result.Object = new List<object>();
                     if (query != null)
                     {
+                        ML.Carro carro = new ML.Carro();
+                        carro.IdCarro = query.IdCarro;
+                        carro.Marca = query.Marca;
+                        carro.Modelo = query.Modelo;
+                        carro.NumeroSerie = query.NumeroSerie;
+                        carro.Color = query.Color;
+                        carro.PaisOrigen = query.PaisOrigen;
+                        carro.Placa = query.Placa;
+
+                        result.Object = carro;
+                        result.Correct = true;
                     
                     }
                 }

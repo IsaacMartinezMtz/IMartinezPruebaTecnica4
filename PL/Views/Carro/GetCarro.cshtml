@@ -6,6 +6,8 @@
 
 <h2>GetCarro</h2>
 
+<a  class="btn btn-success" href="@Url.Action("Form","Carro")">Success</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,23 +24,24 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(ML.Carro carro in Model.Carros) { 
-        <tr>
-            <th scope="row"><button type="button" class="btn btn-outline-warning">Actualizar</button></th>
-            <th scope="row">@carro.IdCarro</th>
-            <td>@carro.Marca</td>
-            <td>@carro.Modelo</td>
-            <td>@carro.NumeroSerie</td>
-            <td>@carro.Color</td>
-            <td>@carro.PaisOrigen</td>
-            <td>@carro.Marca</td>
-            <td>
-                <a  class="btn btn-outline-danger" @Html.Action("Eliminar", "Carro")>Eliminar</a>
-            </td>
-        </tr>
+        @foreach (ML.Carro carro in Model.Carros)
+        {
+            <tr>
+                <th scope="row"><a class="btn btn-outline-warning" href="@Url.Action("Form", "Carro", new {IdCarro = carro.IdCarro})">Actualizar</a></th>
+                <th scope="row">@carro.IdCarro</th>
+                <td>@carro.Marca</td>
+                <td>@carro.Modelo</td>
+                <td>@carro.NumeroSerie</td>
+                <td>@carro.Color</td>
+                <td>@carro.PaisOrigen</td>
+                <td>@carro.Marca</td>
+                <td>
+                    <a class="btn btn-outline-danger" href="@Url.Action("Eliminar", "Carro", new { IdCarro = carro.IdCarro})">Eliminar</a>
+                </td>
+            </tr>
         }
-        
-    </tbody>
 
+    </tbody>
+    U
 
 </table>

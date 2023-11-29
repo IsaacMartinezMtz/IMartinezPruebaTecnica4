@@ -8,54 +8,54 @@
 {
 
     @Html.HiddenFor(model => Model.IdCarro)
-<div class="container text-center">
-    <div class="row row-cols-2">
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.Marca, new { @class = "form-control" })
+    <div class="container text-center">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.Marca, new { @class = "" })
                     @Html.TextBoxFor(model => Model.Marca, new { @class = "form-control" })
-            
-            </div>
 
-        </div>
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.Modelo, new { @class = "form-control" })
+                </div>
+
+            </div>
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.Modelo, new { @class = "" })
                     @Html.TextBoxFor(model => Model.Modelo, new { @class = "form-control" })
 
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.NumeroSerie, new { @class = "form-control" })
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.NumeroSerie, new { @class = "" })
                     @Html.TextBoxFor(model => Model.NumeroSerie, new { @class = "form-control" })
 
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.Color, new { @class = "form-control" })
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.Color, new { @class = "" })
                     @Html.TextBoxFor(model => Model.Color, new { @class = "form-control" })
 
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.PaisOrigen, new { @class = "form-control" })
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.PaisOrigen, new { @class = "" })
                     @Html.TextBoxFor(model => Model.PaisOrigen, new { @class = "form-control" })
 
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div>
-                    @Html.LabelFor(model => Model.Placa, new { @class = "form-control" })
+            <div class="col">
+                <div>
+                    @Html.LabelFor(model => Model.Placa, new { @class = "" })
                     @Html.TextBoxFor(model => Model.Placa, new { @class = "form-control" })
 
+                </div>
             </div>
+           
         </div>
-        <div class="col">Column</div>
     </div>
-</div>
     <button type="submit" class="btn btn-outline-success">Success</button>
 
 
